@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Synapse 2020 | Cultural Fest | DA-IICT, Gandhinagar</title>
+    <!--Import materialize.css-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="/css/register.css" rel="stylesheet" />
+    <style>
+      .dropdown-content {
+        overflow: visible !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/register/battledrone" method="POST">
+        <div class="row">
+          <div class="col-12">
+            <img src="/images/logo.png" alt="" height="100px" style="margin-top: 20px;">
+            <h2 class="heading mt-4">Battledrone Pass</h2>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input type="text" name="name" placeholder="Your Name"/>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input
+            type="text"
+            name="college"
+            placeholder="Institute you are from"
+          />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input
+            id="phone"
+            type="text"
+            name="mobile"
+            placeholder="Your Phone no."
+          />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input type="email" name="email" placeholder="Your email ID"/>
+          </div>
+        </div>
+        <div class="row mt-4">
+            <script src="/js/cities.js"></script>
+            <div class="col-6">
+              <select
+                onchange="print_city('state', this.selectedIndex);"
+                id="sts"
+                name="stt"
+                class="form-control"
+              ></select>
+            </div>
+            <div class="col-6">
+              <select id="state" class="form-control"></select>
+            </div>
+            
+            <script language="javascript">
+              print_state("sts");
+            </script>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <select name="game" class="form-control">
+                  <option disabled selected>Choose your game</option>
+                  <optgroup label="Clash Royale">
+                    <option value="1">(Clash Royale)Solo - 20</option>
+                    <option value="2">(Clash Royale)Duo - 40</option>
+                  </optgroup>
+
+                  <optgroup label="Need For Speed - Most Wanted">
+                    <option value="3">(NFS)Solo - 30 </option>
+                  </optgroup>
+                  <optgroup label="PUBG">
+                    <option value="4">(PUBG)Solo - 30 </option>
+                    <option value="5">(PUBG)Squad - 100 </option>
+                  </optgroup>
+                  <optgroup label="Counter Strike - Global Offensive">
+                    <option value="6">(CS:GO)1v1 - 40 </option>
+                    <option value="7">(CS:GO)5v5 - 200 </option>
+                  </optgroup>
+                  <optgroup label="Counter Strike 1.6">
+                    <option value="8">(CS 1.6)5v5 - 100 </option>
+                  </optgroup>
+                  <optgroup label="FIFA - 18">
+                    <option value="9">(FIFA18)solo - 40 </option>
+                  </optgroup>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-4 d-flex justify-content-center pl-4 pr-4">
+          <input
+            type="submit"
+            class="btn-submit col-12 col-md-6"
+            style="display: inline-block;"
+            value="Register"
+          />
+        </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-2.1.1.min.js"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src="/js/register-synapse100pass.js"></script>
+</html>

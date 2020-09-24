@@ -1,0 +1,73 @@
+.music-carousal {
+  height: 250px;
+  position: relative;
+	margin-top:30px;
+}
+
+.banner-list {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 3;
+}
+
+.banner-list .banner-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.banner-list .banner-item-out {
+  transform: rotateY(0) translateX(0) translateZ(0) scale(.7);
+  opacity: 0;
+  z-index: -1;
+}
+
+.banner-list .banner-item-current {
+  transform: rotateY(0) translateX(0) translateZ(0);
+  z-index: 5;
+ 
+}
+
+.banner-list .banner-item-prev {
+  z-index: 3;
+  transform: rotateY(30deg) translate3d(-100px, -15px, -200px) scale(.7);
+  opacity: 0.7;
+ 
+}
+
+.banner-list .banner-item-next {
+  z-index: 3;
+  transform: rotateY(-30deg) translate3d(100px, -15px, -200px) scale(.7);
+  opacity: 0.7;
+ 
+}
+
+.banner-list .banner-item img {
+  width: 100%;
+  box-shadow: 0 8px 10px 0 rgba(88, 10, 0, 0.2);
+  border-radius: 3px;
+}
+
+.pagination-box {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.pagination-box .pagination-item {
+  width: 8px;
+  height: 8px;
+  background: #E2E2E3;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.pagination-box .pagination-item.active {
+  background: #D71417;
+}

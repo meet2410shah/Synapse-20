@@ -1,0 +1,320 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  background: url("/images/ragna_rock.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+  width: 40%;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0 none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 30px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #ccc;
+  font-size: 16px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+#msform input:focus,
+#msform textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: #f44336;
+  color: white;
+  border: 0 none;
+  border-radius: 17px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 10px;
+}
+#msform .paytm-btn {
+  width: 150px;
+  background: cornflowerblue;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 10px;
+}
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
+}
+/*headings*/
+.fs-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #f44336;
+  color: white;
+}
+select {
+  display: inline;
+  background-color: rgba(255, 255, 255, 0);
+  border: 50%;
+  border-radius: 50px;
+  padding: 0px 20px;
+  color: white;
+  outline: none !important;
+}
+select:focus {
+  border: 50%;
+  border-radius: 50px;
+}
+select option {
+  margin: 40px;
+  background: #f44336;
+  color: white;
+}
+.paytm {
+  width: 100px;
+  margin: 0 auto;
+}
+.head {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 810px) {
+  #msform {
+    width: 100vw;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+  }
+  #msform fieldset {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 5px 5px;
+    box-sizing: border-box;
+    width: 80vw;
+    margin: auto;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+  }
+  /*Hide all except first fieldset*/
+  #msform fieldset:not(:first-of-type) {
+    display: none;
+    padding: 0px !important;
+  }
+  /*inputs*/
+  #msform input,
+  #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: black;
+    font-size: 10px;
+  }
+  /*buttons*/
+  #msform .action-button {
+    width: 100px;
+    background: #f44336;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 10px;
+  }
+  #msform .paytm-btn {
+    width: 150px;
+    background: cornflowerblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 10px;
+  }
+  #msform .action-button:hover,
+  #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #f44336;
+  }
+  /*headings*/
+  .fs-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  .fs-subtitle {
+    font-weight: normal;
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  /*progressbar*/
+  #progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+  }
+  #progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 6px;
+    font-weight: bold;
+    width: 33.33%;
+    float: left;
+    position: relative;
+  }
+  #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+  }
+  /*progressbar connectors*/
+  #progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+  }
+  #progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+  }
+  /*marking active/completed steps green*/
+  /*The number of the step and the connector before it = green*/
+  #progressbar li.active:before,
+  #progressbar li.active:after {
+    background: #f44336;
+    color: white;
+  }
+  select {
+    display: inline;
+  }
+  .paytm {
+    width: 100px;
+    margin: 0 auto;
+  }
+}

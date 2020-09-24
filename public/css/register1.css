@@ -1,0 +1,62 @@
+html {
+	/*Image only BG fallback*/
+	
+    /*background = gradient + image pattern combo*/
+    background: 
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+	
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+    background: #777;
+    background: 
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+.card1,.card2,.card3,.card4{
+    background-color: white;
+    border-style: solid;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    background: 
+        linear-gradient( rgba(155, 89, 182, 0.6),rgba(196, 102, 0, 0.6));
+    
+}
+.btn{
+    margin-bottom: 10px;
+}
+.head{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.description{
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+    
+}
+.dropdown-content ul li{
+    width: 300px;
+}
+.list{
+    text-align: left;
+}
+.card3 ul ul li{
+    margin-left: 20px;
+    font-weight: normal;
+}
+.card3 .list ul {
+    font-weight: bold;
+}
+.card4 h6{
+    font-weight: bold;
+}
+.card4 ul{
+    margin: 20px;
+}
+.card4{
+    margin-left: 30px;
+}

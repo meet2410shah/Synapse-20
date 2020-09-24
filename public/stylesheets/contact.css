@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    background-color: white;
+
+}
+.background {
+    background-color: #f2f2f2;
+}
+@media (max-width:500px){
+    body{
+        padding: 0;
+    }
+}
+
+
+/* TOP FRONT LOGO */
+.top-front-logo {
+	top: 22px;
+	left: 19px;
+	position: absolute;
+	width: 70px;
+	z-index: 0;
+}
+
+.top-front-logo img {
+	width: 70px;
+}
+
+@media (max-width: 400px){
+	.top-front-logo img {
+		width: 52px;
+	}
+}
+
+
+.contact-us-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #222;
+    padding-top: 20px;
+    text-transform: uppercase;
+    
+}
+
+
+
+@media (max-width: 600px){
+    .contact-us-title {
+        padding-top: 45px;
+        font-size: 24px;
+    }
+}
+
+.synapse-member-details {
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    min-width: 273px;
+    min-height: 306px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.synapse-member-section {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1330px;
+}
+
+.synapse-member-section > div {
+    margin: 30px;
+}
+
+.synapse-member {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/person.png);
+}
+
+.synapse-member:hover > .synapse-member-details {
+    opacity: 1;
+}
+.synapse-member:active > .synapse-member-details {
+    opacity: 1;
+}
+
+

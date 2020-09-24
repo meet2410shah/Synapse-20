@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="syn100.css">
+    </head>
+
+    <body>
+        <div class="head">
+            Battledrone Regestration
+        </div>
+        <!-- multistep form -->
+        <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Personal Details</li>
+                <li>Accomodation</li>
+                <li>Payment</li>
+                 
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Personal Details</h2>
+                <h3 class="fs-subtitle">This is step 1</h3>
+                <input type="text" name="name" placeholder="Full Name" />
+                <input type="text" name="institute" placeholder="Institute" />
+                <input type="email" name="email" placeholder="email" />
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Choose your game</option>
+                      <optgroup label="Clash Royale">
+                        <option value="1">(Clash Royale)Solo - 20</option>
+                        <option value="2">(Clash Royale)Duo - 40</option>
+                      </optgroup>
+                      <optgroup label="Need For Speed - Most Wanted">
+                        <option value="3">(NFS)Solo - 30 </option>
+                      </optgroup>
+                      <optgroup label="PUBG">
+                        <option value="4">(PUBG)Solo - 30 </option>
+                        <option value="5">(PUBG)Squad - 100 </option>
+                      </optgroup>
+                      <optgroup label="Counter Strike - Global Offensive">
+                        <option value="6">(CS:GO)1v1 - 40 </option>
+                        <option value="7">(CS:GO)5v5 - 200 </option>
+                      </optgroup>
+                      <optgroup label="Counter Strike 1.6">
+                        <option value="8">(CS 1.6)5v5 - 100 </option>
+                      </optgroup>
+                      <optgroup label="FIFA - 18">
+                        <option value="9">(FIFA18)solo - 40 </option>
+                      </optgroup>
+                    </select>
+                    
+                  </div>
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Accomodation</h2>
+                <h3 class="fs-subtitle">Do you need a place to stay at the venue</h3>
+                <label>Choose Check-in date</label>
+                <select class="browser-default">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="0">No I dont need Accomodation</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Registration fees</h2>
+                <h3 class="fs-subtitle paytm"><img src="iconfinder_paytm_1220356.svg"></h3>
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="submit" name="submit" class="submit action-button paytm-btn" value="Pay" />
+            </fieldset>
+        </form>
+
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="syn100.js"></script>
+</html>

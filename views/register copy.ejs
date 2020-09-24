@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Synapse 2020 | Cultural Fest | DA-IICT, Gandhinagar</title>
+    <!--Import materialize.css-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="./css/register.css" rel="stylesheet" />
+    <style>
+      .dropdown-content {
+        overflow: visible !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/register" method="POST">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="heading mt-4">Registration Form</h2>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input type="text" name="name" placeholder="Your Name" />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input
+            type="text"
+            name="college"
+            placeholder="Institute you are from"
+          />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input
+            id="phone"
+            type="text"
+            name="mobile"
+            placeholder="Your Phone no."
+          />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2 d-flex align-items-center">
+            <input type="email" name="email" placeholder="Your email ID" />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 mt-2">
+            <div class="row" style="padding-right: 15px;">
+              <div class="col-3 col-sm-3 col-md-2 d-flex" style="padding-right: 0px !important;">
+                <a
+                  class="dropdown-button d-flex justify-content-center align-items-center"
+                  href="#"
+                  style="flex-grow: 100;"
+                  data-activates="dropdown1"
+                  data-beloworigin="true"
+                >
+                  <i class="material-icons icon">arrow_drop_down_circle</i>
+                </a>
+                <ul id="dropdown1" class="dropdown-content">
+                  <li>
+                    <a
+                      class="dropdown-button2 red-text"
+                      href="#"
+                      data-activates="dropdown2"
+                      >Raga</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-button2 red-text"
+                      href="#"
+                      data-activates="dropdown3"
+                      >Shailee</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-button2 red-text"
+                      href="#"
+                      data-activates="dropdown4"
+                      >Hello</a
+                    >
+                  </li>
+                </ul>
+                <ul id="dropdown2" class="dropdown-content">
+                  <li>
+                    <a href="#!" onclick="generateValue(1,1)" class="red-text">
+                      Solo</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#!" onclick="generateValue(1,2)" class="red-text">
+                      Group</a
+                    >
+                  </li>
+                </ul>
+                <ul id="dropdown3" class="dropdown-content">
+                  <li>
+                    <a href="#!" onclick="generateValue(2,1)" class="red-text">
+                      English</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#!" onclick="generateValue(2,2)" class="red-text">
+                      Hindi</a
+                    >
+                  </li>
+                </ul>
+                <ul id="dropdown4" class="dropdown-content">
+                  <li>
+                    <a href="#!" onclick="generateValue(3,1)" class="red-text">
+                      Hello1</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#!" onclick="generateValue(3,2)" class="red-text">
+                      Hello2</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#!" onclick="generateValue(3,3)" class="red-text">
+                      Hello3</a
+                    >
+                  </li>
+                </ul>
+                <input
+                  id="eventVar"
+                  type="hidden"
+                  value="none"
+                  name="event"
+                />
+                <input id="catVar" type="hidden" value="none" name="category" />
+                <input id="priceVar" type="hidden" value="none" name="price" />
+              </div>
+              <div class="col-9 col-sm-9 col-md-10 eventName d-flex justify-content-left align-items-center">
+                <p id="eventName">Event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4 d-flex justify-content-center pl-4 pr-4">
+          <input
+            type="submit"
+            class="btn-submit col-12 col-md-6"
+            style="display: inline-block;"
+            value="Register"
+          />
+        </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-2.1.1.min.js"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".dropdown-button2").dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrain_width: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: $(".dropdown-content").width(), // Spacing from edge
+        belowOrigin: false, // Displays dropdown below the button
+        alignment: "left", // Displays dropdown with edge aligned to the left of button
+        closeOnClick: "true"
+      });
+    });
+
+    eventList = ["Raga", "Shailee", "Hello"];
+    cat1 = ["Solo", "Group"];
+    cat2 = ["English", "Hindi"];
+    cat3 = ["Hello1", "Hello2", "Hello3"];
+    catprice1 = [10, 20];
+    catprice2 = [30, 40];
+    catprice3 = [50, 60, 70];
+
+    function generateValue(event, category) {
+      var ev = document.getElementById("eventVar");
+      var cat = document.getElementById("catVar");
+      var text = document.getElementById("eventName");
+      var price = document.getElementById("priceVar");
+
+      ev["value"] = eventList[event - 1];
+      category--;
+      switch (event) {
+        case 1:
+          cat["value"] = cat1[category];
+          price["value"] = catprice1[category];
+          text.textContent = eventList[event - 1] + " (" + cat1[category] + ")";
+          break;
+        case 2:
+          cat["value"] = cat2[category];
+          price["value"] = catprice2[category];
+          text.textContent = eventList[event - 1] + " (" + cat2[category] + ")";
+          break;
+        case 3:
+          cat["value"] = cat3[category];
+          price["value"] = catprice3[category];
+          text.textContent = eventList[event - 1] + " (" + cat3[category] + ")";
+          break;
+      }
+    }
+  </script>
+</html>

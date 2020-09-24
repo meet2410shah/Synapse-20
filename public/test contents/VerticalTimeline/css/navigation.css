@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.sidebar{
+    position: fixed;
+    top:0;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.4);
+    z-index: 20;
+    transition: 0.5s;
+}
+
+.sidebar.sidebar_active{
+    left: 0;
+}
+.toggle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -38px;
+    width: 38px;
+    height: 60px;
+    background: #47a3da;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 40px; */
+}
+
+.toggle::before{
+    content: '';
+    position: relative;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.sidebar.sidebar_active .toggle::before{
+    transform: rotate(225deg);
+    left: 10px;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    padding: 60px;
+    transform: translateX(-100%);
+}
+.sidebar.sidebar.sidebar_active ul {
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+.sidebar ul li {
+    list-style: none;
+    padding: 20px 0;
+    font-family: Lato;
+}
+.sidebar ul li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 0 20px;
+    z-index: 30;
+    transition: 0.5s;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: Lato;
+
+}
+
+.sidebar ul li a:hover{
+    letter-spacing: 5px;
+    transform: translateX(15px);
+    font-family: Lato;
+
+}
+.sidebar ul li a::before{
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    /* background-color: #47a3da; */
+    z-index: 15;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    font-family: Lato;
+
+}
+.sidebar ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    font-family: Lato;
+
+}
+
+@media (max-width: 1045px){
+    .sidebar{
+        left: -40%;
+        width: 40%;
+    }
+    .sidebar ul {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 700px){
+    .sidebar{
+        left: -50%;
+        width: 50%;
+    }
+    .sidebar ul {
+        padding: 30px;
+    }
+}
+@media (max-width: 520px){
+    .sidebar{
+        left: -70%;
+        width: 70%;
+    }
+    .sidebar ul {
+        padding: 30px;
+    }
+}

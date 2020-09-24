@@ -1,0 +1,24 @@
+{
+	"SERVER": {
+		"PORT": 3000,
+		"DATABASE": {
+			"CONNECTION_STRING": ""
+		},
+		"URL": "http://localhost:3000"
+	},
+	"PAYMENT": {
+		"MID": "",
+		"MKEY": ""
+	},
+	"MAIL": {
+		"EMAIL": "",
+		"CLIENT_ID": "",
+		"CLIENT_SECRET": "",
+		"REDIRECT_URL": "",
+		"REFRESH_TOKEN": ""
+	},
+	"COOKIES": {
+		"DURATION": 3000000,
+		"SECRET_KEY": "Synapse2021"
+	}
+}

@@ -1,0 +1,112 @@
+html, body{
+  height: 100%;
+}
+
+div, body{
+  margin: 0;
+  padding: 0;
+  font-family: Raleway,sans-serif;
+  color: #ffffff;
+
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-wrapper {
+  height: 40px;
+  display: flex;
+  background-color: white;
+  padding: 5px;
+}
+
+.navbar-to-home {
+  text-decoration: none;
+  display: flex;
+}
+
+.navbar-to-home:hover {
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+.navbar-logo-label {
+  padding-top: 0;
+  line-height: 40px;
+  color: black;
+  margin: 0;
+}
+
+.navbar-wrapper > .navbar-right {
+  flex: 1;
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.navbar-register-button {
+  color: #FF0000;
+  line-height: 36px;
+  border: 2px solid #FF0000;
+  padding: 0 5px;
+  text-decoration: none;
+  border-radius: 15px; 
+}
+
+.navbar-register-button:hover {
+  text-decoration: none;
+  box-shadow: 2px 2px 10px #d8d8d8;
+}
+
+.navbar-place-cover {
+  height: 40px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 100px;
+  border-radius: 3px;
+  padding:5%;
+  letter-spacing: 1.5px;
+}
+
+.blog-content{
+  font-size: 1em;
+  border-left: 5px solid #ffffff;
+  padding-left: 15px;
+}
+
+.blog-title{
+  font-size: 2.5em;
+  margin-top: 5px;
+}
+
+.pass100{
+  color: red;
+  font-family: Raleway,sans-serif;
+}
+
+.c8{
+  font-size: 1.5em;
+}
+
+.contact{
+  text-align: center;
+  font-family: Raleway,sans-serif;
+}
+
+#contacts{
+  color:red;
+}
+
+@media screen and (max-width: 520px){
+  .blog-title {
+    font-size: 1.5em;
+  }
+}
